@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from PIL import Image
 import folium
-from streamlit_folium import st_folium
+#from streamlit_folium import st_folium
 import plotly.express as px
 
 #dataframe
@@ -102,13 +102,13 @@ def guilty():
                 st.write('Volcanic eruptions and global warming are inextricably related since the formation of the Earth. This is because volcanoes have been spewing enormous amount of ash, water vapor, and green house gazes into the atmosphere.')
                 st.markdown("<h6 style='text-align: right; color: grey;'>Source http://www.ngdc.noaa.gov/</h6>", unsafe_allow_html=True)
 
-                m = folium.Map(location=df_volcan['Coordinates'].iloc[0], zoom_start=7)
-                for i in range(len(df_volcan)):
-                        folium.Marker(
-                        location=df_volcan['Coordinates'].iloc[i],
-                        popup=str(df_volcan['Volcano Name'].iloc[i]) + '\n'+ str(df_volcan['Year'].iloc[i]) + '\n' + str(df_volcan['Volcanic Explosivity Index'].iloc[i])
-                        ).add_to(m) 
-                st_data = st_folium(m, width=725)
+#               m = folium.Map(location=df_volcan['Coordinates'].iloc[0], zoom_start=7)
+#              for i in range(len(df_volcan)):
+#                        folium.Marker(
+#                        location=df_volcan['Coordinates'].iloc[i],
+#                        popup=str(df_volcan['Volcano Name'].iloc[i]) + '\n'+ str(df_volcan['Year'].iloc[i]) + '\n' + str(df_volcan['Volcanic Explosivity Index'].iloc[i])
+#                        ).add_to(m) 
+#                st_data = st_folium(m, width=725)
             if option1 == 'Sun radiation':
                 st.write('Solar magnetic fields produce sunspots, whose number increases and decreases with a 10.7-year periodicity (Milankovitch Cycle). This puzzling regularity in the Sun activity is known as solar cycle. ')
                 st.markdown("<h6 style='text-align: right; color: grey;'>Source https://www.sidc.be/SILSO/datafiles-old</h6>", unsafe_allow_html=True)
